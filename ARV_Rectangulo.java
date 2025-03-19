@@ -1,8 +1,8 @@
 public class ARV_Rectangulo {
-    int id = 1;
-    double ladoA = 10.1;
-    double ladoB = 10.2;
-    String color = "rojo";
+    int id;
+    double ladoA;
+    double ladoB;
+    String color;
 
     public ARV_Rectangulo(Integer id, Double ladoA, Double ladoB, String color) {
 
@@ -32,12 +32,19 @@ public class ARV_Rectangulo {
         return ladoB;
     }
 
+    public void setladoB(Double ladoB) {
+        this.ladoB = ladoB;
+    }
+
     @Override
     public String toString() {
         return "ARV_Rectangulo [id=" + id + ", ladoA=" + ladoA + ", ladoB=" + ladoB + ", color=" + color + "]";
     }
 
-    public void setladoB(Double ladoB) {
-        this.ladoB = ladoB;
+    public static void extracted(ARV_Rectangulo rectangulo1) {
+        double ladoA = rectangulo1.getladoA();
+        double ladoB = rectangulo1.getladoB();
+        double area1 = ladoA * ladoB;
+        System.out.println("Area rectangulo: " + area1);
     }
 }

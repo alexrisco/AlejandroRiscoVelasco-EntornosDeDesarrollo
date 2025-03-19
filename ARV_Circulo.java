@@ -1,8 +1,8 @@
 public class ARV_Circulo {
 
-    int id = 10;
-    double radio = 10.5;
-    String color = "rojo";
+    int id;
+    double radio;
+    String color;
 
     public ARV_Circulo(Integer id, Double radio, String color) {
 
@@ -39,4 +39,11 @@ public class ARV_Circulo {
     public String toString() {
         return "arv_Circulo [id=" + id + ", radio=" + radio + ", color=" + color + "]";
     }
+
+    public static void extracted(ARV_Circulo circulo1) {
+        double radio1 = circulo1.getradio();
+        double area2 = radio1 * 3.14;
+        System.out.println("Area circulo: " + area2);
+    }
+
 }
